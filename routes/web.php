@@ -11,10 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    $lists = App\Lists::all()->where('owner_id', auth()->id());
-    return view('welcome', compact('lists'));
-});
+// Route::get('/', function () {
+//     $lists = App\Lists::all()->where('owner_id', auth()->id());
+//     return view('welcome', compact('lists'));
+// });
+Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
 

@@ -23,6 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('welcome');
+        $lists = App\Lists::all()->where('owner_id', auth()->id());
+        return view('welcome', compact('lists'));
     }
 }
