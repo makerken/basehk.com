@@ -1,0 +1,78 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.words {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.homenav {
+    position: absolute;
+    text-align: left;
+    left: 2em;
+    bottom: 2em;
+    z-index: 1;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    30%  { opacity: 0.5 }
+    80%  { opacity: 0.5 }
+    to   { opacity: 0; }
+}
+.fade-alert {
+    animation-duration: 1s;
+    animation-name: fadein;
+}
+.play-info {
+    position: absolute;
+    left: 50%;
+    margin-left: -24px;
+    bottom: 1.5em;
+}
+.word-num {
+    position: absolute;
+    text-align: right;
+    right: 2em;
+    bottom: 2em;
+}
+#app {
+    min-height: 100vh;
+}
+.pill-bg {
+    background-color: #e9ecef;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 0 0.17rem #e9ecef,
+                0 0 0 0.22rem #C2CAD2;
+    margin: 0.22rem;
+}
+.badge-light {
+    box-shadow: 0.03rem 0.03rem 0.08rem 0.08rem #A6AAAE;
+}
+.plus:hover {
+    background-color: #f9fcff;
+}
+.pl-45 {
+    padding-left: ($spacer * 2) !important;
+}
+.picker {
+    display: inline-block;
+    border: 2px solid var(--dark);
+    box-shadow: 0 0 0 1px var(--dark);
+    border-radius: 4px;
+    width: 2.3rem;
+    height: 2.3rem;
+}
+.pick-indicator {
+    bottom: -2px;
+    width: 0; 
+    height: 0; 
+    border-left: 6px solid transparent; 
+    border-right: 6px solid transparent; 
+    border-bottom: 8px solid var(--dark);
+}
